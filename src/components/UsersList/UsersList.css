@@ -1,0 +1,106 @@
+.users-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  max-width: 99%;
+  background-color: #ffffff;
+  
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-input:focus {
+  border-color: #007bff; /* Цвет при фокусе на поле ввода */
+}
+
+.button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+
+}
+
+.button:hover {
+  background-color: #0056b3; /* Цвет при наведении на кнопку */
+}
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  
+}
+
+.user-item {
+
+  gap: 50px; 
+padding-left: 100PX;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+
+  width: 100%;
+  
+  
+}
+.user-phone{
+  padding-right: 40px ;
+}
+.cp{
+  padding-left: 80px;
+
+}
+
+.user-item:hover {
+  background-color: #0a11d461; 
+  transition: 0.3s;
+}
+
+.user-info {
+  
+  padding-right: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.user-info strong {
+  margin-right: 10px;
+}
+
+.category {
+  display: flex;
+  justify-content: space-around;
+  gap: 160px; 
+  padding-right: 140px;
+  padding-left: 220px;
+}
+
+.category h3 {
+  flex: 1;
+  text-align: center;
+}
+
+.edit-info {
+  position: fixed;
+  z-index: 1000;
+}
