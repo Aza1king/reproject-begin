@@ -23,7 +23,7 @@ const UserDetails = () => {
   if (!user) {
     return (
       <div className="loading">
-        <div className="loader"></div> {/* Добавляем загрузчик */}
+        <div className="loader"></div> 
         Loading...
       </div>
     );

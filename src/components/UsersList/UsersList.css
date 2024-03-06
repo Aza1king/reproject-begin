@@ -22,7 +22,7 @@
 }
 
 .search-input:focus {
-  border-color: #007bff; /* Цвет при фокусе на поле ввода */
+  border-color: #007bff;
 }
 
 .button {
@@ -38,7 +38,7 @@
 }
 
 .button:hover {
-  background-color: #0056b3; /* Цвет при наведении на кнопку */
+  background-color: #0056b3; 
 }
 
 .user-list {
