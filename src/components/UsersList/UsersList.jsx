@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   fetchUsers,
@@ -9,9 +9,9 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleInfo, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faPen } from '@fortawesome/free-solid-svg-icons';
-
 import { Link } from "react-router-dom"; 
 import "./UsersList.css";
+import UserEditModal from "../Modal/UserEditModal";
 
 const UsersList = () => {
   const dispatch = useDispatch();
@@ -42,40 +42,20 @@ const UsersList = () => {
 
   const handleEditUser = (user) => {
     setEditedUser(user);
-    setEditName("");
-    setEditUsername("");
-    setEditStreet("");
-    setEditCity("");
-    setEditPhone("");
+    setEditName(user.name);
+    setEditUsername(user.username);
+    setEditStreet(user.address.street);
+    setEditCity(user.address.city);
+    setEditPhone(user.phone);
+  };
+
+  const handleSaveUser = (updatedUserData) => {
+    dispatch(updateUserById({ userId: updatedUserData.id, updatedUserData }));
+    setEditedUser(null);
   };
 
   const handleCancelEdit = () => {
     setEditedUser(null);
-    setEditName("");
-    setEditUsername("");
-    setEditStreet("");
-    setEditCity("");
-    setEditPhone("");
-  };
-
-  const handleSaveUser = () => {
-    const updatedUserData = {
-      id: editedUser.id,
-      name: editName,
-      username: editUsername,
-      address: {
-        street: editStreet,
-        city: editCity,
-      },
-      phone: editPhone,
-    };
-    dispatch(updateUserById({ userId: editedUser.id, updatedUserData }));
-    setEditedUser(null);
-    setEditName("");
-    setEditUsername("");
-    setEditStreet("");
-    setEditCity("");
-    setEditPhone("");
   };
 
   return (
@@ -93,6 +73,7 @@ const UsersList = () => {
         </button>
       </div>
       <div className="category">
+        <h3>Photo</h3>
         <h3>Name</h3>
         <h3>UerName</h3>
         <h3>Адрес</h3>
@@ -106,6 +87,9 @@ const UsersList = () => {
           {users.map((user) => (
             <li key={user.id} className="user-item">
               <div className="user-info">
+                <img src={user.photo} alt={user.name} className="user-photo" />
+              </div>
+              <div className="user-info">
                 {user.name}
               </div>
               <div className="user-info">{user.username}</div>
@@ -116,50 +100,11 @@ const UsersList = () => {
 
               <div className="user-edit">
                 {editedUser && editedUser.id === user.id ? (
-                  <>
-                    <br />
-                    <input
-                      className="edit-input"
-                      type="text"
-                      placeholder="Имя"
-                      value={editName}
-                      onChange={(e) => setEditName(e.target.value)}
-                    />
-                    <input
-                      className="edit-input"
-                      placeholder="Имя пользователя"
-                      type="text"
-                      value={editUsername}
-                      onChange={(e) => setEditUsername(e.target.value)}
-                    />
-                    <input
-                      className="edit-input"
-                      placeholder="Улица"
-                      type="text"
-                      value={editStreet}
-                      onChange={(e) => setEditStreet(e.target.value)}
-                    />
-                    <input
-                      className="edit-input"
-                      placeholder="Город"
-                      type="text"
-                      value={editCity}
-                      onChange={(e) => setEditCity(e.target.value)}
-                    />
-                    <input
-                      className="edit-input"
-                      placeholder="Телефон"
-                      type="text"
-                      value={editPhone}
-                      onChange={(e) => setEditPhone(e.target.value)}
-                    />
-                    <button className="button" onClick={handleSaveUser}>
-                      Сохранить
-                    </button>
-                    <button className="button" onClick={handleCancelEdit}>
-                      Отмена
-                    </button>
-                  </>
+                  <UserEditModal
+                    user={editedUser}
+                    onSave={handleSaveUser}
+                    onCancel={handleCancelEdit}
+                  />
                 ) : (
                   <>
                     <button
@@ -167,18 +112,18 @@ const UsersList = () => {
                       onClick={() => handleEditUser(user)}
                     >
                       <FontAwesomeIcon icon={faPen} />
-
                     </button>
+                    
                     <button
                       className="button"
                       onClick={() => handleDeleteUser(user.id)}
                     >
                       <FontAwesomeIcon icon={faTrashAlt} />
                     </button>
+                    
                     <Link to={`/user/${user.id}`} className="button button-link">
-  <FontAwesomeIcon icon={faCircleInfo} />
-</Link>
-
+                      <FontAwesomeIcon icon={faCircleInfo} />
+                    </Link>
                   </>
                 )}
               </div>

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
-  max-width: 99%;
+  max-width: 95%;
   background-color: #ffffff;
   
 }
@@ -12,6 +12,9 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  padding-right: auto;
+  padding-left: 900px;
+  
 }
 
 .search-input {
@@ -34,10 +37,11 @@
   border-radius: 4px;
   transition: background-color 0.3s ease;
   text-decoration: none;
+  gap: 10px ;
 
 }
 
-.button:hover {
+.button:hover {  
   background-color: #0056b3; 
 }
 
@@ -70,10 +74,7 @@ padding-left: 100PX;
 
 }
 
-.user-item:hover {
-  background-color: #0a11d461; 
-  transition: 0.3s;
-}
+
 
 .user-info {
   
@@ -102,5 +103,22 @@ padding-left: 100PX;
 
 .edit-info {
   position: fixed;
+  z-index: 1000;
+}
+.user-photo {
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%; 
+  object-fit: cover; 
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(214, 85, 4, 0.956);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(231, 13, 13, 0.1);
   z-index: 1000;
 }

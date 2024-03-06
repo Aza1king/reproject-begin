@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "./UsersDetails.css";
 
@@ -22,7 +22,7 @@ const UserDetails = () => {
 
   if (!user) {
     return (
-      <div className="loading">
+      <div className="loading-container">
         <div className="loader"></div> 
         Loading...
       </div>
@@ -30,9 +30,14 @@ const UserDetails = () => {
   }
 
   return (
+    
     <div className="user-details-container">
       <h2>User Details</h2>
-      <div className="user-info">
+      <Link to="/users" className="back-button">
+        Назад
+      </Link>
+      <div className="user-details-info">
+        <img src={user.photo} alt={user.name} className="user-details-photo" />
         <p>
           <strong>Username:</strong> {user.username}
         </p>
