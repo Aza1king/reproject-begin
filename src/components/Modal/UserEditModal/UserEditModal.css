@@ -1,0 +1,82 @@
+.user-edit-modal-body{
+color: #ff6f00;
+}
+.user-edit-modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+   
+  }
+  
+  .user-edit-modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-edit-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .user-edit-modal-header h2 {
+    margin: 0;
+  }
+  
+  .user-edit-modal-close-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  .user-edit-modal-close-button:hover {
+    color: red;
+  }
+  
+  .user-edit-modal-body {
+    margin-bottom: 20px;
+  }
+  
+  .user-edit-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .user-edit-modal-save-button {
+    background-color: #ff6f00;
+    
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-edit-modal-save-button:hover {
+    background-color: #ffffff;
+    color: #ff6f00;
+  }
+  
+  .user-edit-modal-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .user-edit-modal-input::placeholder {
+    color: #999;
+  }
+ 

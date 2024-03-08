@@ -1,4 +1,4 @@
-.user-edit-modal-container {
+.add-user-modal-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,49 +6,51 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 40%;
     background-color: rgba(0, 0, 0, 0.5);
+    color: #ff6f00;
   }
-  
-  .user-edit-modal-content {
+
+  .add-user-modal-content {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .user-edit-modal-header {
+  .add-user-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
   }
   
-  .user-edit-modal-header h2 {
+  .add-user-modal-header h2 {
     margin: 0;
   }
   
-  .user-edit-modal-close-button {
+  .add-user-modal-close-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 30px;
   }
-  .user-edit-modal-close-button:hover {
+  
+  .add-user-modal-close-button:hover {
     color: red;
   }
   
-  .user-edit-modal-body {
+  .add-user-modal-body {
     margin-bottom: 20px;
   }
   
-  .user-edit-modal-footer {
+  .add-user-modal-footer {
     display: flex;
     justify-content: flex-end;
   }
   
-  .user-edit-modal-save-button {
-    background-color: #007bff;
+  .add-user-modal-save-button {
+    background-color: #ff6f00;
     color: white;
     border: none;
     border-radius: 4px;
@@ -58,11 +60,12 @@
     transition: background-color 0.3s ease;
   }
   
-  .user-edit-modal-save-button:hover {
-    background-color: #0056b3;
+  .add-user-modal-save-button:hover {
+    background-color: #ffffff;
+    color: #ff6f00;
   }
   
-  .user-edit-modal-input {
+  .add-user-modal-input {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -70,7 +73,9 @@
     border-radius: 4px;
   }
   
-  .user-edit-modal-input::placeholder {
+  .add-user-modal-input::placeholder {
     color: #999;
   }
-  
+  .h4{
+    color: #ff6f00;
+  }

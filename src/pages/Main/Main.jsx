@@ -12,9 +12,9 @@ const Main = () => {
         <Link to="/users" className="main-link">
           Users
         </Link>
-        <Link to="/AddUser" className="main-link">
-          Add Users
-        </Link>
+        
+        
+        
       </header>
       <Outlet />
     </>

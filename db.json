@@ -2,15 +2,14 @@
   "users": [
     {
       "id": "4",
-      "name": "Aza King",
+      "name": "Aza Kingi",
       "username": "Azat",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png",
       "address": {
         "street": "Суйунбаева 51",
         "city": "Ош"
       },
       "phone": "0221200227",
-      "description": "Творческий и инновационный студент, постоянно ищущий новые способы решения проблем, и не боящийся экспериментировать с новыми идеями и подходами в учебе."
+      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png"
     },
     {
       "id": "efdd",
@@ -21,7 +20,7 @@
         "city": "Ош"
       },
       "phone": "0221200227",
-      "photo": "https://avatars.dzeninfra.ru/get-zen_doc/941737/pub_5f087e01d20c9b4c4ae96672_5f0c5eb29407d80b9c09042c/scale_1200"
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQ5FT_1lQ76SINs-2tlSgQEkR7M4suh5FMg&usqp=CAU"
     },
     {
       "id": "5074",
@@ -103,7 +102,7 @@
         "city": "Ош"
       },
       "phone": "0221200227",
-      "photo": "https://avatars.dzeninfra.ru/get-zen_doc/941737/pub_5f087e01d20c9b4c4ae96672_5f0c5eb29407d80b9c09042c/scale_1200"
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQ5FT_1lQ76SINs-2tlSgQEkR7M4suh5FMg&usqp=CAU"
     },
     {
       "id": "d51f",
@@ -153,15 +152,14 @@
     },
     {
       "id": "7b4d",
-      "username": "Хаям",
       "name": "Омар",
+      "username": "Хаям",
       "address": {
         "street": "Кулиева",
         "city": "Бишкек"
       },
       "phone": "0999999999",
-      "description": "тупой очень тупой тупой тупой тупой очень тупой тупой тупойтупой очень тупой тупой тупой",
-      "photo": "https://avatars.dzeninfra.ru/get-zen_doc/941737/pub_5f087e01d20c9b4c4ae96672_5f0c5eb29407d80b9c09042c/scale_1200"
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQ5FT_1lQ76SINs-2tlSgQEkR7M4suh5FMg&usqp=CAU"
     }
   ]
 }

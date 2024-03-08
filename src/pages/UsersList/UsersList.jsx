@@ -6,15 +6,17 @@ import {
   deleteUserById,
   updateUserById,
 } from "../../redux/reducers/userSlice";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleInfo, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-import { faPen } from '@fortawesome/free-solid-svg-icons';
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleInfo, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
+import { AddUserModal, UserEditModal } from "../../components/Modal";
 import "./UsersList.css";
-import UserEditModal from "../Modal/UserEditModal";
 
 const UsersList = () => {
   const dispatch = useDispatch();
+  const [showAddUserModal, setShowAddUserModal] = useState(false);
+
   const { users, loading, error } = useSelector((state) => state.users);
   const [searchName, setSearchName] = useState("");
   const [editedUser, setEditedUser] = useState(null);
@@ -71,34 +73,49 @@ const UsersList = () => {
         <button onClick={handleSearch} className="button">
           Поиск
         </button>
+        <button className="button" onClick={() => setShowAddUserModal(true)}>
+          Добавить пользователя
+        </button>
       </div>
-      <div className="category">
-        <h3>Photo</h3>
-        <h3>Name</h3>
-        <h3>UerName</h3>
-        <h3>Адрес</h3>
-        <h3 className="cp">Phone</h3>
-        <h3></h3>
-      </div>
-      <div className="user-list-container">
-        {loading && <p className="loading">Загрузка...</p>}
-        {error && <p className="error">Ошибка: {error}</p>}
-        <ul className="user-list">
-          {users.map((user) => (
-            <li key={user.id} className="user-item">
-              <div className="user-info">
-                <img src={user.photo} alt={user.name} className="user-photo" />
-              </div>
-              <div className="user-info">
-                {user.name}
-              </div>
-              <div className="user-info">{user.username}</div>
-              <div className="user-info">
-                {user.address.street}, {user.address.city}
-              </div>
-              <div className="user-phone">{user.phone}</div>
 
-              <div className="user-edit">
+      <table>
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Адрес</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {loading && (
+            <tr>
+              <td colSpan="6" className="loading">
+                Загрузка...
+              </td>
+            </tr>
+          )}
+          {error && (
+            <tr>
+              <td colSpan="6" className="error">
+                Ошибка: {error}
+              </td>
+            </tr>
+          )}
+          {users.map((user) => (
+            <tr key={user.id}>
+              <td>
+                <img src={user.photo} alt={user.name} className="user-photo" />
+              </td>
+              <td>{user.name}</td>
+              <td>{user.username}</td>
+              <td>
+                {user.address.street}, {user.address.city}
+              </td>
+              <td>{user.phone}</td>
+              <td className="user-actions">
                 {editedUser && editedUser.id === user.id ? (
                   <UserEditModal
                     user={editedUser}
@@ -113,25 +130,28 @@ const UsersList = () => {
                     >
                       <FontAwesomeIcon icon={faPen} />
                     </button>
-                    
                     <button
                       className="button"
                       onClick={() => handleDeleteUser(user.id)}
                     >
                       <FontAwesomeIcon icon={faTrashAlt} />
                     </button>
-                    
-                    <Link to={`/user/${user.id}`} className="button button-link">
+                    <Link
+                      to={`/user/${user.id}`}
+                      className="button button-link"
+                    >
                       <FontAwesomeIcon icon={faCircleInfo} />
                     </Link>
                   </>
                 )}
-              </div>
-
-            </li>
+              </td>
+            </tr>
           ))}
-        </ul>
-      </div>
+        </tbody>
+      </table>
+      {showAddUserModal && (
+        <AddUserModal onClose={() => setShowAddUserModal(false)} />
+      )}
     </div>
   );
 };

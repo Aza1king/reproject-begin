@@ -1,0 +1,84 @@
+.users-list-container {
+  font-family: Arial, sans-serif;
+  margin: 40px
+}
+
+.search-container {
+  margin: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: #ff8400;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+
+
+.button:hover {
+  background-color: #ffffff;
+  transition: 0.3s;
+  color: #ff8400;
+}
+
+.users-list-container table {
+  width: 100%;
+ 
+}
+
+.users-list-container th,
+.users-list-container td {
+  padding: 12px;
+
+  text-align: left;
+}
+
+.users-list-container th {
+  background-color: #f2f2f2;
+}
+
+.loading,
+.error {
+  padding: 12px;
+}
+
+.user-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-actions .button {
+  margin-right: 5px;
+}
+
+.user-actions .button-link {
+  margin-right: 5px;
+}
+
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(214, 85, 4, 0.956);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(231, 13, 13, 0.1);
+  z-index: 1000;
+}
