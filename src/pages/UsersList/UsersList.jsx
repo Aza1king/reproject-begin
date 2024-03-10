@@ -1,59 +1,46 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  fetchUsers,
-  searchUserByName,
-  deleteUserById,
-  updateUserById,
-} from "../../redux/reducers/userSlice";
+import * as userActions from "../../redux/reducers/userSlice";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleInfo, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo, faTrashAlt, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
-import { AddUserModal, UserEditModal } from "../../components/Modal";
+import { AddUserModal, UserEditModal, Loader } from "../../components/Modal";
+
 import "./UsersList.css";
 
 const UsersList = () => {
   const dispatch = useDispatch();
   const [showAddUserModal, setShowAddUserModal] = useState(false);
-
   const { users, loading, error } = useSelector((state) => state.users);
   const [searchName, setSearchName] = useState("");
   const [editedUser, setEditedUser] = useState(null);
-  const [editName, setEditName] = useState("");
-  const [editUsername, setEditUsername] = useState("");
-  const [editStreet, setEditStreet] = useState("");
-  const [editCity, setEditCity] = useState("");
-  const [editPhone, setEditPhone] = useState("");
 
   useEffect(() => {
-    dispatch(fetchUsers());
+    dispatch(userActions.fetchUsers());
   }, [dispatch]);
 
-  const handleSearch = () => {
-    if (searchName.trim() !== "") {
-      dispatch(searchUserByName(searchName.trim()));
-    } else {
-      dispatch(fetchUsers());
-    }
-  };
+  const filteredUsers = searchName
+    ? users.filter((user) =>
+        user.name.toLowerCase().includes(searchName.toLowerCase())
+      )
+    : users;
 
   const handleDeleteUser = (userId) => {
-    dispatch(deleteUserById(userId));
+    dispatch(userActions.deleteUserById(userId));
   };
 
   const handleEditUser = (user) => {
     setEditedUser(user);
-    setEditName(user.name);
-    setEditUsername(user.username);
-    setEditStreet(user.address.street);
-    setEditCity(user.address.city);
-    setEditPhone(user.phone);
   };
 
   const handleSaveUser = (updatedUserData) => {
-    dispatch(updateUserById({ userId: updatedUserData.id, updatedUserData }));
-    setEditedUser(null);
+    dispatch(
+      userActions.updateUserById({
+        userId: updatedUserData.id,
+        updatedUserData,
+      })
+    );
   };
 
   const handleCancelEdit = () => {
@@ -67,14 +54,12 @@ const UsersList = () => {
           type="text"
           value={searchName}
           onChange={(e) => setSearchName(e.target.value)}
-          placeholder="Поиск по имени..."
+          placeholder="Search by name..."
           className="search-input"
         />
-        <button onClick={handleSearch} className="button">
-          Поиск
-        </button>
+        
         <button className="button" onClick={() => setShowAddUserModal(true)}>
-          Добавить пользователя
+          <FontAwesomeIcon icon={faUserPlus} />
         </button>
       </div>
 
@@ -83,28 +68,26 @@ const UsersList = () => {
           <tr>
             <th>Photo</th>
             <th>Name</th>
-            <th>UserName</th>
-            <th>Адрес</th>
+            <th>Username</th>
+            <th>Address</th>
             <th>Phone</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {loading && (
-            <tr>
-              <td colSpan="6" className="loading">
-                Загрузка...
-              </td>
-            </tr>
+            <>
+              
+            </>
           )}
           {error && (
             <tr>
               <td colSpan="6" className="error">
-                Ошибка: {error}
+                Error: {error}
               </td>
             </tr>
           )}
-          {users.map((user) => (
+          {filteredUsers.map((user) => (
             <tr key={user.id}>
               <td>
                 <img src={user.photo} alt={user.name} className="user-photo" />
@@ -149,6 +132,11 @@ const UsersList = () => {
           ))}
         </tbody>
       </table>
+      
+      {/* Показываем Loader, если данные загружаются */}
+      {loading && <Loader />}
+      
+      {/* Отображаем модальное окно добавления пользователя */}
       {showAddUserModal && (
         <AddUserModal onClose={() => setShowAddUserModal(false)} />
       )}

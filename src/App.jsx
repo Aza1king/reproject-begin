@@ -2,9 +2,8 @@ import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
 import store from "./redux/store";
-import "./App.css";
+
 import { Home, Main, UsersDetail, UsersList } from "./pages/index.js";
 
 const App = () => {

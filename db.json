@@ -1,165 +1,123 @@
 {
   "users": [
     {
-      "id": "4",
-      "name": "Aza Kingi",
-      "username": "Azat",
+      "id": "9876",
+      "name": "Максим Сидоров",
+      "username": "maximus",
       "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
+        "street": "пр. Победы 10ава",
+        "city": "Киев"
       },
-      "phone": "0221200227",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png"
+      "phone": "380987654321",
+      "photo": "https://play-lh.googleusercontent.com/hJGHtbYSQ0nCnoEsK6AGojonjELeAh_Huxg361mVrPmzdwm8Ots-JzEH5488IS2nojI=w240-h480-rw",
+      "description": "Страстный фотограф, чьи работы заставляют восхищаться красотой мира вокруг нас."
     },
     {
-      "id": "efdd",
-      "name": "Aza King",
-      "username": "Azat",
+      "id": "3456",
+      "name": "Мария Григорьева",
+      "username": "maria_g",
       "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
+        "street": "ул. Тверская 5",
+        "city": "Москва"
       },
-      "phone": "0221200227",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQ5FT_1lQ76SINs-2tlSgQEkR7M4suh5FMg&usqp=CAU"
+      "phone": "89091234567",
+      "photo": "https://storage.googleapis.com/pai-images/4208d4679ea143b1b23cf3f62ccf999b.jpeg",
+      "description": "Амбициозный стартапер, создающий инновационные решения для повышения эффективности бизнеса."
     },
     {
-      "id": "5074",
-      "name": " Aza King",
-      "username": "Aza",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png",
+      "id": "7654",
+      "name": "Алексей Смирнов",
+      "username": "alex_coder",
       "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
+        "street": "ул. Ленинградская 3",
+        "city": "Москва"
       },
-      "phone": "0221200227",
-      "description": "Творческий и инновационный студент, постоянно ищущий новые способы решения проблем, и не боящийся экспериментировать с новыми идеями и подходами в учебе."
+      "phone": "89991234567",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP_mApmmZDhmydMv6C35U-v0X6UehYUIeaLQVdQnhqlLz6k-mFFiQ7JPQb5E2CEAkBK-w&usqp=CAU",
+      "description": "Амбициозный стартапер, создающий инновационные решения для повышения эффективности бизнеса."
     },
     {
-      "id": "c87e",
-      "name": "Aza King",
-      "username": "azaz",
+      "id": "6543",
+      "name": "Анна Кузнецова",
+      "username": "anna_artist",
       "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
+        "street": "пр. Ленина 12",
+        "city": "Санкт-Петербург"
       },
-      "phone": "0221200227",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png"
+      "phone": "88001112233",
+      "photo": "https://www.iamdave.ai/wp-content/uploads/TheRiseofGenerativeAIAvatars.webp",
+      "description": "Амбициозный стартапер, создающий инновационные решения для повышения эффективности бизнеса."
     },
     {
-      "id": "e093",
-      "username": "zaaza",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png",
-      "name": "Aza King",
+      "id": "5432",
+      "name": "Игорь Семенов",
+      "username": "igor_physics",
       "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
+        "street": "ул. Физическая 8",
+        "city": "Новосибирск"
       },
-      "phone": "0221200227",
-      "description": "Творческий и инновационный студент, постоянно ищущий новые способы решения проблем, и не боящийся экспериментировать с новыми идеями и подходами в учебе."
+      "phone": "89105556677",
+      "photo": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/321830247/original/aa20bcdaa1ed769431a116d0eaeb3ad3c2134c10/revolutionize-your-image-with-a-personalized-ai-avatar.jpg",
+      "description": "Амбициозный стартапер, создающий инновационные решения для повышения эффективности бизнеса."
+    },
+    {
+      "id": "4321",
+      "name": "Елена Иванова",
+      "username": "elena_writer",
+      "address": {
+        "street": "пл. Пушкина 1",
+        "city": "Москва"
+      },
+      "phone": "89998887766",
+      "photo": "https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/cle81t4r9000dkz08hbdw2tzs_1/public",
+      "description": "Амбициозный стартапер, создающий инновационные решения для повышения эффективности бизнеса."
+    },
+    {
+      "id": "3210",
+      "name": "Денис Козлов",
+      "username": "denis_chemist",
+      "address": {
+        "street": "ул. Химическая 2",
+        "city": "Екатеринбург"
+      },
+      "phone": "89096543210",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6sdt0uuKw98U-sxMn2CLGFDb_Jq5IInbWKA&usqp=CAU",
+      "description": "Амбициозный стартапер, создающий инновационные решения для повышения эффективности бизнеса."
+    },
+    {
+      "id": "2109",
+      "name": "Виктория Степанова",
+      "username": "victoria_music",
+      "address": {
+        "street": "пр. Музыкальный 7",
+        "city": "Казань"
+      },
+      "phone": "880022233441",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5NAznzRJfW3X8w-PAaVJ3r1I0SCPLYyIJqN5Yha3aHkcOmYCEYt9Ghluo1Ifuu8qbipI&usqp=CAU",
+      "description": "Амбициозный стартапер, создающий инновационные решения для повышения эффективности бизнеса."
     },
     {
       "id": "6395",
-      "username": "zazaz",
-      "name": "Aza King",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png",
+      "name": "Азатбек Жороев",
+      "username": "AzaKing",
       "address": {
         "street": "Суйунбаева 51",
         "city": "Ош"
       },
       "phone": "0221200227",
-      "description": "Творческий и инновационный студент, постоянно ищущий новые способы решения проблем, и не боящийся экспериментировать с новыми идеями и подходами в учебе."
+      "photo": "https://img.freepik.com/premium-photo/a-cool-panda-with-sunglasses-is-on-a-colorful-background-generated-by-ai_894067-50.jpg"
     },
     {
-      "id": "7c49",
-      "username": "Aza",
-      "name": "Aza King",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png",
+      "id": "636c",
+      "username": "sdsd",
+      "name": "dsd",
       "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
+        "street": "dsds",
+        "city": "dsdsd"
       },
-      "phone": "0221200227",
-      "description": "Творческий и инновационный студент, постоянно ищущий новые способы решения проблем, и не боящийся экспериментировать с новыми идеями и подходами в учебе."
-    },
-    {
-      "id": "8",
-      "username": "Aza",
-      "name": "Aza King",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png",
-      "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
-      },
-      "phone": "0221200227",
-      "description": "Творческий и инновационный студент, постоянно ищущий новые способы решения проблем, и не боящийся экспериментировать с новыми идеями и подходами в учебе."
-    },
-    {
-      "id": "7",
-      "name": "Aza King",
-      "username": "Aza",
-      "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
-      },
-      "phone": "0221200227",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQ5FT_1lQ76SINs-2tlSgQEkR7M4suh5FMg&usqp=CAU"
-    },
-    {
-      "id": "d51f",
-      "name": "Aza King",
-      "username": "zaraww",
-      "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
-      },
-      "phone": "0221200227",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png"
-    },
-    {
-      "id": "e188",
-      "name": "Aza KingЙ",
-      "username": "добрый",
-      "address": {
-        "street": "Суйунбаева 51",
-        "city": "Ош"
-      },
-      "phone": "0221200227",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png"
-    },
-    {
-      "id": "e190",
-      "username": "username3",
-      "name": "Name3",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png",
-      "address": {
-        "street": "Street3",
-        "city": "City3"
-      },
-      "phone": "0221200229",
-      "description": "Активный участник учебного процесса, который не только учится, но и активно участвует в групповых проектах, дискуссиях и обмене идеями, способствуя общему образовательному опыту."
-    },
-    {
-      "id": "e191",
-      "username": "username4",
-      "name": "Name4",
-      "photo": "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png",
-      "address": {
-        "street": "Street4",
-        "city": "City4"
-      },
-      "phone": "0221200230",
-      "description": "Энтузиаст, неутомимо исследующий различные области знаний, активно принимающий участие в дискуссиях и готовый делиться своими открытиями с другими студентами."
-    },
-    {
-      "id": "7b4d",
-      "name": "Омар",
-      "username": "Хаям",
-      "address": {
-        "street": "Кулиева",
-        "city": "Бишкек"
-      },
-      "phone": "0999999999",
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQ5FT_1lQ76SINs-2tlSgQEkR7M4suh5FMg&usqp=CAU"
+      "phone": "sdsd",
+      "description": "sdsdsd",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Guy%2C_Ava_Lauren_at_XRCO_Awards_2007_1_%28cropped%29.jpg"
     }
   ]
 }

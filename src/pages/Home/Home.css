@@ -6,6 +6,7 @@
   .welcome h1 {
     font-size: 36px;
     color: #333;
+    margin-top: 15%;
   }
   
   .welcome h3 {
@@ -13,4 +14,20 @@
     color: #666;
     margin-top: 20px;
   }
+  .userlink{
+    text-decoration: none;
+    padding: 8px 16px;
+  background-color: #ff8400;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  }
+  .userlink:hover{
+    background-color: #ffffff;
+  transition: 0.3s;
+  color: #ff8400;
+  }
+
   

@@ -1,36 +1,47 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios";
+import { getUserById } from "../../../api/api";
+
 import "./UsersDetails.css";
+import { Loader } from "../../../components/Modal";
 
 const UserDetails = () => {
   const { id } = useParams();
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/users/${id}`);
-        setUser(response.data);
+        const user = await getUserById(id);
+        setUser(user);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching user:", error);
+        setLoading(false);
       }
     };
 
     fetchUser();
   }, [id]);
 
+  if (loading) {
+    return <Loader loading={loading} />;
+  }
+
   if (!user) {
     return (
-      <div className="loading-container">
-        <div className="loader"></div> 
-        Loading...
+      <div className="error-container">
+        <h2>Error</h2>
+        <p>Failed to fetch user data</p>
+        <Link to="/users" className="back-button">
+          Назад
+        </Link>
       </div>
     );
   }
 
   return (
-    
     <div className="user-details-container">
       <h2>User Details</h2>
       <Link to="/users" className="back-button">
